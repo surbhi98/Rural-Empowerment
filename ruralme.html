@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
+
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color:#0099cc;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid { color:#0099cc;
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #0099cc;
+  }
+  .carousel-indicators li.active {
+      background-color: #0099cc;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #0099cc; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #0099cc;
+      background-color: #fff !important;
+      color: #0099cc;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #0099cc !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #0099cc;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #0099cc;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #0099cc !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #0099cc;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">Rights</a></li>
+        <li><a href="#portfolio">Policies</a></li>
+        <li><a href="#pricing">FAQ</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav><br><br>
+<div class="container">
+  <br><br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="images/rural1.jpg" alt="Chania" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Chania</h3>
+          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="images/1rural.jpg" alt="Chania" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Chania</h3>
+          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="images/rural2.jpg" alt="Flower" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Flowers</h3>
+          <p>Beatiful flowers in Kolymbari, Crete.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="images/rural3.jpg" alt="Flower" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Flowers</h3>
+          <p>Beatiful flowers in Kolymbari, Crete.</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<!--NEWS FEED-->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+ <br> <h2>NEWS FEED</h2>
+ <hr>
+ <!-- <h4>What we have created</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="paris.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Paris</strong></p>
+        <p>Yes, we built Paris</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="newyork.jpg" alt="New York" width="400" height="300">
+        <p><strong>New York</strong></p>
+        <p>We built New York</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
+        <p><strong>San Francisco</strong></p>
+        <p>Yes, San Fran is ours</p>
+      </div>
+    </div>
+  </div><br>
+  -->
+  <h2>Latest Trends</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+<!--<div class="jumbotron text-center">
+  <h1>Rural</h1> 
+  
+  <form>
+    <div class="input-group">
+      <label for="text">Type: </label>
+    </tr><input type="text" class="form-group" size="50" list="type" placeholder="select your type" required>
+     <datalist id="type">
+      	<option value="Doctor">
+		<option value="Entrepreneur">
+		<option value="Farmer">
+		<option value="Girl Child">
+		<option value="Student">
+		<option value="Women">
+	 </datalist>	
+		<br>
+	
+	  <div class="input-group-btn">
+	  <br>
+        <button type="button" class="btn btn-success">Search</button>
+      </div>
+    </div>
+  </form>
+</div>-->
+
+<!-- Container (About Section) -->
+<!--
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Company Page</h2><br>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+     http://ec.europa.eu/social/BlobServlet?mode=displayPicture&photoId=6850<br><button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>-->
+<!--
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+-->
+<!--problems and their solution by type-->
+<div id="type" class="container-fluid text-center">
+<h2>classification</h2>
+<br>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#pc1" class="glyphicon glyphicon-user">Student</a>
+      </h4>
+    </div>
+    <div id="pc1" class="panel-collapse collapse">
+      <ul class="list-group">
+        <li class="list-group-item">One</li>
+        <li class="list-group-item">Two</li>
+        <li class="list-group-item">Three</li>
+      </ul>
+      <div class="panel-footer">Footer</div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>Rights and Policies</h2>
+  <h4></h4>
+  <br>
+  <div class="row slideanim">
+   <div class="col-sm-4">
+       <a href="#collapse1" data-toggle="collapse"><img src="http://www.uneca.org/sites/default/files/styles/blog_post/public/PageFeaturedImages/africa-growth_0.jpg?itok=8DaoPbhj" class="img-circle" alt="Cinque Terre" width="304" height="236"></a>
+       <h4>Land Policy</h4>
+	
+     <div id="collapse1" class="collapse">
+	 <ul class="list-group">
+        <a href="#indira" data-toggle="collapse"><li class="list-group-item">Indira Awaas Yojana</li></a>
+          <div id="indira" class="collapse">
+		  	Provides financial assistance to rural poor for constructing their houses themselves. 
+		   </div>
+		<a href="#pradhan" data-toggle="collapse"><li class="list-group-item">Pradhan Mantri Gram Sadak Yojana</li>
+        </a><div id="pradhan" class="collapse">
+		  	Good all-weather road connectivity to unconnected villages
+		   </div>
+		<a href="#rajiv" data-toggle="collapse">
+		<li class="list-group-item">Rajiv Awas Yojana</li></a>
+        <div id="rajiv" class="collapse">
+		  	It envisages a “Slum Free India" with inclusive and equitable cities in which every citizen has access to basic civic infrastructure and social amenities and decent shelter.
+		   
+		   </div>
+		   <a href="#pmay" data-toggle="collapse">
+		<li class="list-group-item">Pradhan Mantri Awas Yojana (PMAY)</li></a>
+	    <div id="pmay" class="collapse">
+		  To enable better living and drive economic growth stressing on the need for people centric urban planning and development.
+		   
+		   </div>
+		<a href="#ddup" data-toggle="collapse">
+		<li class="list-group-item">Deen Dayal Upadhyaya Grameen Kaushalya Yojna</li></a>
+		<div id="ddup" class="collapse">
+		
+		It is a Government of India Project to engage rural youth specially BPL and SC/ST segment of population, in gainful employment through skill training programmes.
+
+
+		   </div>
+		<a href="#irdp" data-toggle="collapse">
+		<li class="list-group-item">Integrated Rural Development Program</li></a>
+		<div id="irdp">
+		Self-employment program to raise the income-generation capacity of target groups among the poor and The scheme has been merged with another scheme named Swarnajayanti Gram Swarozgar Yojana.
+		</div>
+				  
+		<a href="#hri" data-toggle="collapse">
+
+		<li class="list-group-item">HRIDAY – Heritage City Development and Augmentation Yojana</li></a>
+				<div id="hri" class="collapse">
+		
+		The scheme seeks to preserve and rejuvenate the rich cultural heritage of the country.
+		
+				   </div>
+	  </ul>
+	   </div>
+	</div>
+ 
+
+    <div class="col-sm-4">
+       <a href="#collapse2" data-toggle="collapse"><img src="https://spiteribaileyadvocates.files.wordpress.com/2013/01/employment-policies.jpg?w=425" class="img-circle" alt="Cinque Terre" width="304" height="236"></a>
+      <h4>Employement</h4>
+	   <div id="collapse2" class="collapse">
+	 <ul class="list-group">
+        <a href="#pmkv" data-toggle="collapse"><li class="list-group-item">Pradhan Mantri Kaushal Vikas Yojna</li></a>
+          <div id="pmkv" class="collapse">
+		 To provide encouragement to youth for development of employable skills by providing monetary rewards by recognition of prior learning or by undergoing training at affiliated centres.  </div>
+		<a href="#pmkv2" data-toggle="collapse"><li class="list-group-item">Pradhan Mantri Kaushal Vikas Yojana</li>
+        </a><div id="pmkv2" class="collapse">
+		  	Seeks to provide the institutional capacity to train a minimum 40 crore skilled people by 2022
+		   </div>
+		<a href="#nrlm" data-toggle="collapse">
+		<li class="list-group-item">National Rural Livelihood Mission (NRLM)</li></a>
+        <div id="nrlm" class="collapse">
+		  	This scheme will organize rural poor into Self Help Group(SHG) groups and make them capable for self-employment. The idea is to develop better livelihood options for the poor.
+
+
+		   </div>
+		   <a href="#sgsy" data-toggle="collapse">
+		<li class="list-group-item">Swarnajayanti Gram Swarozgar Yojana</li></a>
+	    <div id="sgsy" class="collapse">
+		
+Bring the assisted poor families above the poverty line by organizing them into Self Help Groups (SHGs) through the process of social mobilization, their training and capacity building and provision of income generating assets through a mix of bank credit and government subsidy.
+
+		
+		   </div>
+		<a href="#sg" data-toggle="collapse">
+		<li class="list-group-item">Sampoorna Grameen Rozgar Yojana
+
+</li></a>
+		<div id="sg" class="collapse">
+		
+Providing additional wage employment and food security, alongside creation of durable community assets in rural areas.
+
+		   </div>
+		<a href="#nulm" data-toggle="collapse">
+		<li class="list-group-item">National Urban Livelihood Mission (NULM)</li></a>
+		<div id="nulm">
+		
+		This scheme will reduce poverty of urban poor households specially street vendors who constitute an important segment of urban poor by enabling them to access gainful self-employment and skilled wage employment opportunities.
+		
+		
+		</div>
+		
+		
+		<a href="#mg" data-toggle="collapse">
+
+		<li class="list-group-item">Mahatma Gandhi National Rural Employment Guarantee Act</li></a>
+				<div id="mg" class="collapse">
+		Legal guarantee for one hundred days of employment in every financial year to adult members of any rural household willing to do public work-related unskilled manual work at the statutory minimum wage of Rs. 120 per day in 2009 prices.
+		
+				   </div>
+	  </ul>
+	   </div>
+     
+    </div>
+    <div class="col-sm-4">
+       <a href="#collapse3 " data-toggle="collapse"><img src="https://www.paturnpike.com/images/finance_planning/policy_cr.png" class="img-circle" alt="Cinque Terre" width="304" height="236"></a>
+       <h4>Financial and Insurance</h4>
+  <div id="collapse3" class="collapse">
+	 <ul class="list-group">
+	 
+        <a href="#pmsb" data-toggle="collapse"><li class="list-group-item">Pradhan Mantri Suraksha Bima Yojana </li></a>
+          <div id="pmsb" class="collapse">
+Accidental Insurance with a premium of Rs. 12 per year.
+		</div>
+		
+		<a href="#pmjj" data-toggle="collapse"><li class="list-group-item">Pradhan Mantri Jeevan Jyoti Bima Yojana</li>
+        </a><div id="pmjj" class="collapse">
+		  	Life insurance of Rs. 2 lakh with a premium of Rs. 330 per year.
+		   </div>
+		   
+		<a href="#rsby" data-toggle="collapse"><li class="list-group-item">Rashtriya Swasthya Bima Yojana
+
+</li>
+        </a><div id="rsby" class="collapse">
+		  	Health insurance to poor (BPL), Domestic workers, MGNERGA workers, Rikshaw pullers, Building and other construction workers, and many other categories as may be identified by the respective states
+			
+			
+		   </div>
+		   
+		<a href="#sw" data-toggle="collapse"><li class="list-group-item">Swabhiman</li>
+        </a><div id="sw" class="collapse">
+		  		To make banking facility available to all citizens and to get 5 crore accounts opened by Mar 2012. Replaced by Pradhan Mantri Jan Dhan Yojana.</div>
+	
+		   
+		   
+		   
+		<a href="#pmjd" data-toggle="collapse"><li class="list-group-item">Pradhan Mantri Jan Dhan Yojana
+
+           </li>
+        </a><div id="pmjd" class="collapse">
+		National Mission for Financial Inclusion to ensure access to financial services, namely Banking Savings & Deposit Accounts, Remittance, Credit, Insurance, Pension in an affordable manner
+				
+		   </div>
+		   
+		   
+				  
+	  </ul>
+	   </div>   
+    </div>
+ 
+  <br>
+  
+  
+  
+  
+  
+  
+  <div class="row slideanim">
+    <div class="col-sm-4"  id="accordion">
+      <a href="#collapse4" data-toggle="collapse"><img src="http://techpolicylab.org/wp-content/themes/tech-policy-lab/img/venn_diagram.png" class="img-circle" alt="Cinque Terre" width="304" height="236"></a>
+      <h4>Technology</h4>
+     <div id="collapse4" class="collapse" >
+	 <ul class="list-group">
+        <a href="#sdfgg" data-toggle="collapse" data-parent="#accordion"><li class="list-group-item">Bachat Lamp Yojana</li></a>
+          <div id="sdfgg" class="collapse">
+		reduce the cost of compact fluorescent lamps  </div>
+		<a href="#pmkk" data-toggle="collapse" ><li class="list-group-item">Deen Dayal Upadhyaya Gram Jyoti Yojana</li>
+        </a><div id="pmkk" class="collapse">
+		 It is a Government of India program aimed at providing 24x7 uninterrupted power supply to all homes in Rural India-
+		   </div>
+		<a href="#aaaa" data-toggle="collapse" data-parent="#accordion">
+		<li class="list-group-item"> Rajiv Gandhi Grameen Vidyutikaran Yojana</li></a>
+        <div id="aaaa" class="collapse">& for creation Electrification for providing access to electricity to rural Household Programme of Rural Electricity Infrastructure households 
+
+
+		   </div>
+		   <a href="#sgsy" data-toggle="collapse" data-parent="#accordion">
+		<li class="list-group-item">Swarnajayanti Gram Swarozgar Yojana</li></a>
+	    <div id="sgsy" class="collapse">
+		
+Bring the assisted poor families above the poverty line by organizing them into Self Help Groups (SHGs) through the process of social mobilization, their training and capacity building and provision of income generating assets through a mix of bank credit and government subsidy.
+
+		
+		   </div>
+		<a href="#sg" data-toggle="collapse" data-parent="#accordion">
+		<li class="list-group-item">Sampoorna Grameen Rozgar Yojana
+
+</li></a>
+		<div id="sg" class="collapse" data-parent="#accordion">
+		
+Providing additional wage employment and food security, alongside creation of durable community assets in rural areas.
+
+		   </div>
+		<a href="#nulm" data-toggle="collapse">
+		<li class="list-group-item">National Urban Livelihood Mission (NULM)</li></a>
+		<div id="nulm" class="collapse">
+		
+		This scheme will reduce poverty of urban poor households specially street vendors who constitute an important segment of urban poor by enabling them to access gainful self-employment and skilled wage employment opportunities.
+		
+		
+		</div>
+		
+		
+		<a href="#mg" data-toggle="collapse" data-parent="#accordion">
+
+		<li class="list-group-item">Mahatma Gandhi National Rural Employment Guarantee Act</li></a>
+				<div id="mg" class="collapse">
+		Legal guarantee for one hundred days of employment in every financial year to adult members of any rural household willing to do public work-related unskilled manual work at the statutory minimum wage of Rs. 120 per day in 2009 prices.
+		
+				   </div>
+	  </ul>
+	   </div>    
+
+
+
+	
+    </div>
+    
+	
+	
+	<div class="col-sm-4">
+      <a href="#collapse5" data-toggle="collapse"><img src="https://s3-eu-west-1.amazonaws.com/infogram-particles-700/odessiusfitts_1391523243.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236"></a>
+     <h4>Community</h4>
+	      <div id="collapse5" class="collapse">
+	 <ul class="list-group">
+        <a href="#dlp" data-toggle="collapse"><li class="list-group-item">Digital India Programme</li></a>
+          <div id="dlp" class="collapse">Aims to ensure that government services are available to citizens electronically and people get benefited from the latest information and communication technology
+ </div>
+		<a href="#s" data-toggle="collapse"><li class="list-group-item">Swavalamban</li></a>
+          <div id="s" class="collapse"> 
+		  pension scheme to the workers in unorganised sector. Any citizen who is not part of any statutory pension scheme of the Government and contributes between Rs. 1000 and Rs. 12000/- per annum, could join the scheme. The Central Government shall contribute Rs. 1000 per annum to such subscribers.</div>
+		
+		
+		
+		
+		<a href="#nclp" data-toggle="collapse"><li class="list-group-item">National Child Labour Projects(NCLP)
+
+</li>
+        </a><div id="nclp" class="collapse">
+		The objective of this project is to eliminate child labour in hazardous industries by 2010.Under this scheme, the target group is all children below 14 years of age who are working in occupations and processes listed in the Schedule to the Child Labour (Prohibition & Regulation) Act, 1986 or occupations and processes that are harmful to the health of the child.
+		</div> 
+		<a href="#ddrs" data-toggle="collapse">
+		<li class="list-group-item">
+Deendayal Disabled Rehabilitation Scheme
+</li></a>
+        <div id="ddrs" class="collapse">Create an enabling environment to ensure equal opportunities, equity, social justice and empowerment of persons with disabilities.
+				   </div>
+		   <a href="#nps" data-toggle="collapse">
+		<li class="list-group-item">National Pension Scheme
+
+</li></a>
+	    <div id="nps" class="collapse">Contribution based pension system
+		
+
+		   </div>
+		</ul>
+	</div>
+    
+
+	
+    </div>
+	 
+	 <div class="col-sm-4">
+     <a href="#collapse5" data-toggle="collapse"><img src="https://ccafs.cgiar.org/sites/default/files/styles/large/public/blog/pictures/15572430890_6029319f5e_o.jpg?itok=rd8lq_YD" class="img-circle" alt="Cinque Terre" width="304" height="236"></a>
+      <h4>Agriculture</h4>
+     <div id="collapse5" class="collapse">
+	 <ul class="list-group">
+        <a href="#gramin" data-toggle="collapse"><li class="list-group-item">Gramin Bhandaran Yojana</li></a>
+          <div id="gramin" class="collapse">
+Creation of scientific storage capacity with allied facilities in rural areas to meet the requirements of farmers for storing farm produce, processed farm produce and agricultural inputs. Improve their marketability through promotion of grading, standardization and quality control of agricultural produce. </div>
+		<a href="#rkvy" data-toggle="collapse"><li class="list-group-item">Rashtriya Krishi Vikas Yojana
+
+</li>
+        </a><div id="rkvy" class="collapse">
+		Achieve 4% annual growth in agriculture through development of Agriculture and its allied sectors during the XI Plan period
+		
+		
+		</div> 
+		<a href="#nswf" data-toggle="collapse">
+		<li class="list-group-item">
+National Scheme on Welfare of Fishermen
+</li></a>
+        <div id="nswf" class="collapse">
+		Financial assistance to fishers for construction of house, community hall for recreation and common working place and installation of tube-wells for drinking water
+
+		   </div>
+		   <a href="#lis" data-toggle="collapse">
+		<li class="list-group-item">Livestock Insurance Scheme</li></a>
+	    <div id="lis" class="collapse">
+		Insurance to cattle and attaining qualitative improvement in livestock and their products.
+
+		   </div>
+		
+	  </ul>
+	   </div>    
+    </div>
+	 <div class="col-sm-4">
+      <a href="#collapse6"><img src="http://www.jdellit.com.au/wp-content/uploads/2012/02/Education-for-all-crop1-300x300.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236"></a>
+      <h4>Education</h4>
+	  <div id="collapse6" class="collapse">
+	 <ul class="list-group">
+        <a href="#kgbv" data-toggle="collapse"><li class="list-group-item">Kasturba Gandhi Balika Vidyalaya</li></a>
+          <div id="kgbv" class="collapse">
+       Educational facilities (residential schools) for girls belonging to SC, ST, OBC, minority communities and families below the poverty line(BPL) in Educationally Backward Blocks
+	   </div>
+	   <a href="#ip" data-toggle="collapse"><li class="list-group-item">INSPIRE Programme
+          </li>
+        </a><div id="ip" class="collapse">
+		Scholarships for top Science students, Fellowships for pursuing PhD, Research Grants to researchers
+		</div> 
+		<a href="#kvpy" data-toggle="collapse">
+		<li class="list-group-item"> Kishore Vaigyanik Protsahan Yojana
+
+
+
+</li></a>
+        <div id="kvpy" class="collapse">
+		Scholarship program to encourage students to take up research careers in the areas of basic sciences, engineering and medicine
+				   </div>
+		   <a href="#mms" data-toggle="collapse">
+		<li class="list-group-item">Midday Meal Scheme
+</li></a>
+	    <div id="mms" class="collapse">Lunch (free of cost) to school-children on all working days
+		</div>
+		
+	  </ul>
+	   </div>    
+
+      
+
+
+
+     
+    </div>
+	 <div class="col-sm-4">
+      <a href="#collapse7" data-toggle="collapse"><img src="http://www.betsyhealth.com/assets/Fotolia-2233215-X.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236"></a>    
+	  <h4>Food and Health</h4>
+	   <div id="collapse7" class="collapse">
+	 <ul class="list-group">
+        <a href="#igmsy" data-toggle="collapse"><li class="list-group-item">Indira Gandhi Matritva Sahyog Yojana</li></a>
+          <div id="igmsy" class="collapse">
+      	   </div>
+	   <a href="#jsy" data-toggle="collapse"><li class="list-group-item">Janani Suraksha Yojana
+
+
+          </li>
+        </a><div id="jsy" class="collapse">
+		One-time cash incentive to pregnant women for institutional/home births through skilled assistance.</div> 
+		<a href="#pmuy" data-toggle="collapse">
+		<li class="list-group-item"> Pradhan Mantri Ujjwala Yojana
+
+
+
+</li></a>
+        <div id="pmuy" class="collapse"> Launched to provide free LPG connections to women from below poverty line families.
+	
+				   </div>
+		   <a href="#mms" data-toggle="collapse">
+		<li class="list-group-item">Midday Meal Scheme
+</li></a>
+	    <div id="mms" class="collapse">Lunch (free of cost) to school-children on all working days
+		</div>
+		 <a href="#mms" data-toggle="collapse">
+		<li class="list-group-item">Midday Meal Scheme
+</li></a>
+	    <div id="mms" class="collapse">Lunch (free of cost) to school-children on all working days
+		</div>
+		
+	  
+	  
+	  </ul>
+	   </div>
+     
+    </div>
+    
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="googleMap" style="height:400px;width:100%;"></div>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+function initialize() {
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  scrollwheel:false,
+  draggable:false,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
